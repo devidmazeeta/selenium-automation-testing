@@ -11,7 +11,7 @@ public class EdnueTest {
 		driver.manage().window().maximize();
 
 		// Navigate to Ednue
-		driver.get("https://ednue.com");
+		driver.get("https://ednue.com/");
 
 		// Validate the page title
 		String title = driver.getTitle();
@@ -26,7 +26,4 @@ public class EdnueTest {
 			driver.quit();
 		}
 	}
-
-	
-	
 }
