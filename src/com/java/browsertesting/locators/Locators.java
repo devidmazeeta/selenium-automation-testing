@@ -1,4 +1,4 @@
-package com.browser.testing;
+package com.java.browsertesting.locators;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
