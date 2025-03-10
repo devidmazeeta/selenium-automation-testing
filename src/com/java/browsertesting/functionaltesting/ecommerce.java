@@ -24,21 +24,18 @@ public class ecommerce {
 		searchBoxElement.sendKeys("Tshirt");
 
 //		searchBoxElement.sendKeys(Keys.chord(Keys.ENTER));
-		driver.findElement(By.xpath("//form[@class='search']/div/button[@type='submit']")).click();
-
-//		Zara Orange Rugged
+		driver.findElement(By.xpath("//form/div/button[@type='submit']")).click();
 
 		List<WebElement> productsElements = driver.findElements(By.className("full-unstyled-link"));
 
 		for (WebElement productsElement : productsElements) {
 			String productName = productsElement.getText();
-//			System.out.println(productName);
+			System.out.println(productName);
 
 			if (productName.contains("Zara Orange Rugged")) {
 				productsElement.click();
 				break;
 			}
-
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -46,17 +43,13 @@ public class ecommerce {
 		WebElement addToCartElement = driver.findElement(By.xpath("//div[@class='product-form__buttons']/button"));
 		addToCartElement.submit();
 
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		TimeUnit time = TimeUnit.SECONDS;
+		time.sleep(2);
 
-//		driver.findElement(By.xpath("//div[@class='modal-close-button']")).click();
-
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-
-		WebElement checkoutButton = driver.findElement(By.cssSelector("button[contains(text(), 'Check out')]"));
+		WebElement checkoutButton = driver.findElement(By.xpath("//button[@name='checkout']"));
 		checkoutButton.submit();
 
-		TimeUnit time = TimeUnit.SECONDS;
-		time.sleep(10);
+		time.sleep(5);
 
 		driver.quit();
 	}
