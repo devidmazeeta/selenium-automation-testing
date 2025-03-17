@@ -38,8 +38,6 @@ public class ecommerce {
 			}
 		}
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
 		WebElement addToCartElement = driver.findElement(By.xpath("//div[@class='product-form__buttons']/button"));
 		addToCartElement.submit();
 
