@@ -1,9 +1,6 @@
 package com.java.browsertesting.iframe;
 
-import javax.xml.datatype.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -52,7 +49,7 @@ public class IFrameDragAndDrop {
 			System.out.println("Drag and Drop Failed!");
 		}
 
-//		Thread.sleep(5000);
+		// Thread.sleep(5000);
 
 		// Switching back to the main content
 		driver.switchTo().defaultContent();
